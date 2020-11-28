@@ -1,13 +1,22 @@
 {
   "name": "software-testing-assignment",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/",
+	  "!<rootDir>/coverage/"
+    ]
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "jest",
-    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+	"test:coverage": "jest --coverage",
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov "
   },
+
   "author": "",
   "license": "MIT",
   "dependencies": {
