@@ -1,29 +1,49 @@
 {
   "name": "software-testing-assignment",
-  "jest": {
-    "collectCoverageFrom": [
-      "src/*.{js,jsx,ts,tsx}",
-      "!<rootDir>/node_modules/",
-	  "!<rootDir>/coverage/"
-    ]
-  },
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "MIT",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest",
-	"test:coverage": "jest --coverage",
+    "test": "jest --verbose --forceExit --detectOpenHandles",
+	"test:simple": "jest",
+	"clean": "jest --clearCache",
+    "test:coverage": "rm -rf coverage && mkdir coverage && jest --coverage --verbose --forceExit --detectOpenHandles --no-color 2>./coverage/jest-result.txt",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
 
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "jest-extended": "^0.11.5"
-  },
   "devDependencies": {
-    "coveralls": "^3.1.0",
-    "jest": "^26.6.3"
-  }
+    "@babel/core": "7.12.3",
+    "@babel/preset-env": "7.12.1",
+    "babel-jest": "26.6.1",
+    "coveralls": "3.1.0",
+    "jest": "26.6.1",
+    "jest-extended": "0.11.5"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "jest-extended"
+    ],
+    "collectCoverageFrom": [
+      "**/src/*.{js,jsx}",
+	  "!<rootDir>/node_modules/",
+      "!<rootDir>/coverage/",
+      "!**/src/.internal/"
+    ]
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nekkut/Testausprojekti.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nekkut/Testausprojekti/issues"
+  },
+  "homepage": "https://github.com/nekkut/Testausprojekti#readme"
 }
+
