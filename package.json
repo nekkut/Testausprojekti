@@ -8,12 +8,11 @@
   "type": "module",
   "scripts": {
     "test": "jest --verbose --forceExit --detectOpenHandles",
-	"test:simple": "jest",
-	"clean": "jest --clearCache",
+    "test:simple": "jest",
+    "clean": "jest --clearCache",
     "test:coverage": "rm -rf coverage && mkdir coverage && jest --coverage --verbose --forceExit --detectOpenHandles --no-color 2>./coverage/jest-result.txt",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
-
   "devDependencies": {
     "@babel/core": "7.12.3",
     "@babel/preset-env": "7.12.1",
@@ -29,7 +28,7 @@
     ],
     "collectCoverageFrom": [
       "**/src/*.{js,jsx}",
-	  "!<rootDir>/node_modules/",
+      "!<rootDir>/node_modules/",
       "!<rootDir>/coverage/",
       "!**/src/.internal/"
     ]
@@ -46,4 +45,3 @@
   },
   "homepage": "https://github.com/nekkut/Testausprojekti#readme"
 }
-
