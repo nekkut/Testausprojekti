@@ -6,7 +6,7 @@ const array = [
   { 'user': 'fred', 'active': false }
 ]
 
-describe('Test CountBy', () => {
+describe('Test CountBy Positive', () => {
   test('Test two true and one false', () => {
     expect(countBy(array, value => value.active)).toMatchObject({ 'true': 2, 'false': 1 })
   })

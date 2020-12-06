@@ -20,4 +20,8 @@ describe('Test IsEmpty', () => {
   test('Input {x: 1} should be empty', () => {
     expect(isEmpty({x: 1})).toBe(false)
   })
+  
+  test('Input empty should be empty', () => {
+    expect(isEmpty()).toBe(true)
+  })
 })
