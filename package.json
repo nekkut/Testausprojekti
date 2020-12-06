@@ -11,7 +11,7 @@
     "test:simple": "jest",
     "clean": "jest --clearCache",
     "test:coverage": "rm -rf coverage && mkdir coverage && jest --coverage --verbose --forceExit --detectOpenHandles --no-color 2>./coverage/jest-result.txt",
-    "test:coveralls": "cat coverage/lcov.info | coveralls"
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "devDependencies": {
     "@babel/core": "7.12.3",
