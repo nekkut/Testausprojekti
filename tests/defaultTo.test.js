@@ -6,7 +6,7 @@ describe('Test DefaultTo Positive', () => {
     })
 
     test('Input (1, 2) should cause output 1', () => {
-      expect(defaultTo(null, 1)).toBe(1);
+      expect(defaultTo(1, 2)).toBe(1);
     })
 })
 
