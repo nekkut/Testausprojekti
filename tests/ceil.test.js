@@ -19,7 +19,7 @@ describe('Test Ceil Positive', () => {
     })
 
     test('Input (5, -1) should cause output to 10', () => {
-      expect(ceil(5, -2)).toBe(10);
+      expect(ceil(5, -1)).toBe(10);
     })
 })
 
